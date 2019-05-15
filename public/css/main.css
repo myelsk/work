@@ -1,0 +1,54 @@
+.pagination li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.ads div {
+    background: #ccc;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.pagination {
+    list-style: none;
+}
+
+.logout-button,
+.create-button{
+    padding: 10px;
+    background: #ccc;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+form {
+    margin: 0;
+}
+
+.title-input, textarea {
+    display: block;
+}
+
+textarea {
+    margin-bottom: 10px;
+}
+
+.edit-form label,
+.create-form label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+.return-button,
+.edit-link,
+.title-link {
+    text-decoration: none;
+    color: #000;
+}
