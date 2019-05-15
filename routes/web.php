@@ -20,3 +20,6 @@ Route::delete('/delete/{id}', 'AdsController@destroy');
 Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LoginController@destroy');
 Route::get('/{id}', 'AdsController@showAd');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
