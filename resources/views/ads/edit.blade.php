@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}"/>
+@if($ad)
 <form action="/edit/{{ $ad->id }}" method="post" class="edit-form">
     {{ csrf_field()  }}
     {{ method_field('PUT') }}
@@ -14,3 +15,6 @@
     <button type="submit" class="btn btn-primary">Update Ad</button>
     @include('layouts.errors')
 </form>
+@else
+    <p>Resource you are trying to get does not exists</p>
+@endif

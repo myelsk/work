@@ -34,13 +34,13 @@ class AdsController extends Controller
             'title' => 'required|min:2|max:50',
             'description' => 'required|min:5|max:255'
         ]);
-        Ad::create([
+        $ad = Ad::create([
             'title' => request('title'),
             'description' => request('description'),
             'user_id' => auth()->id()
         ]);
         session()->flash('message', 'Ad have been created');
-        return redirect()->home();
+        return redirect("/$ad->id");
     }
 
     public function update(Request $request, $id) {

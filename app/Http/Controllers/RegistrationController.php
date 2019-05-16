@@ -6,12 +6,12 @@ use App\User;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 
-class LoginController extends Controller
+class RegistrationController extends Controller
 {
     public function store()
     {
         $this->validate(request(), [
-            'name' => 'required|min:2',
+            'name' => 'required|min:2|max:20',
             'password' => 'required|min:3'
         ]);
 

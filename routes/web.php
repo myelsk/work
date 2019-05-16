@@ -17,9 +17,6 @@ Route::post('/edit', 'AdsController@store');
 Route::get('/edit/{id}', 'AdsController@editAd');
 Route::put('/edit/{id}', 'AdsController@update');
 Route::delete('/delete/{id}', 'AdsController@destroy');
-Route::post('/login', 'LoginController@store');
-Route::get('/logout', 'LoginController@destroy');
+Route::post('/signin', 'RegistrationController@store');
+Route::get('/logout', 'RegistrationController@destroy');
 Route::get('/{id}', 'AdsController@showAd');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
